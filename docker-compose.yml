@@ -19,7 +19,7 @@ services:
       - .env
     networks:
       - backend
-  user-service:
+  users-service:
     build: ./users-service
     restart: always
     hostname: users-service

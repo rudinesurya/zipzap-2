@@ -1,0 +1,49 @@
+version: '3'
+services:
+  api-gateway:
+    build: ./api-gateway
+    restart: always
+    hostname: api-gateway
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    networks:
+      - backend
+      - frontend
+  token-service:
+    build: ./token-service
+    restart: always
+    hostname: token-service
+    env_file:
+      - .env
+    networks:
+      - backend
+  user-service:
+    build: ./users-service
+    restart: always
+    hostname: users-service
+    env_file:
+      - .env
+    networks:
+      - backend
+  mongo:
+    image: 'mongo:6'
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DATABASE}
+    volumes:
+      - "./db/data/db-files:/data/db"
+      - "./db/init/:/docker-entrypoint-initdb.d/"
+    ports:
+      - 27017:27017
+    networks:
+      - backend
+networks:
+  backend:
+    driver: bridge
+  frontend:
+    external:
+      name: infrastructure

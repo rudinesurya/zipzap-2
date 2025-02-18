@@ -10,3 +10,12 @@
 [submodule "user-ratings-service"]
 	path = user-ratings-service
 	url = git@github.com:rudinesurya/user-ratings-service.git
+[submodule "jobs-service"]
+	path = jobs-service
+	url = git@github.com:rudinesurya/jobs-service.git
+[submodule "applications-service"]
+	path = applications-service
+	url = git@github.com:rudinesurya/applications-service.git
+[submodule "messages-service"]
+	path = messages-service
+	url = git@github.com:rudinesurya/messages-service.git

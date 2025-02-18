@@ -7,3 +7,6 @@
 [submodule "token-service"]
 	path = token-service
 	url = git@github.com:rudinesurya/token-service.git
+[submodule "user-ratings-service"]
+	path = user-ratings-service
+	url = git@github.com:rudinesurya/user-ratings-service.git

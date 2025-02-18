@@ -27,6 +27,14 @@ services:
       - .env
     networks:
       - backend
+  user-ratings-service:
+    build: ./user-ratings-service
+    restart: always
+    hostname: user-ratings-service
+    env_file:
+      - .env
+    networks:
+      - backend
   mongo:
     image: 'mongo:6'
     restart: always

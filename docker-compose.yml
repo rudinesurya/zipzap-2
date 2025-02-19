@@ -2,7 +2,7 @@ version: '3'
 services:
   api-gateway:
     build: ./api-gateway
-    restart: always
+    restart: no
     hostname: api-gateway
     env_file:
       - .env
@@ -13,7 +13,7 @@ services:
       - frontend
   token-service:
     build: ./token-service
-    restart: always
+    restart: no
     hostname: token-service
     env_file:
       - .env
@@ -21,7 +21,7 @@ services:
       - backend
   users-service:
     build: ./users-service
-    restart: always
+    restart: no
     hostname: users-service
     env_file:
       - .env
@@ -29,7 +29,7 @@ services:
       - backend
   user-ratings-service:
     build: ./user-ratings-service
-    restart: always
+    restart: no
     hostname: user-ratings-service
     env_file:
       - .env
@@ -37,7 +37,7 @@ services:
       - backend
   mongo:
     image: 'mongo:6'
-    restart: always
+    restart: no
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}

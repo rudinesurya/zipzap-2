@@ -35,6 +35,14 @@ services:
       - .env
     networks:
       - backend
+  jobs-service:
+    build: ./jobs-service
+    restart: no
+    hostname: jobs-service
+    env_file:
+      - .env
+    networks:
+      - backend
   mongo:
     image: 'mongo:6'
     restart: no

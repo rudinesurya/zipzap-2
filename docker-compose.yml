@@ -43,6 +43,22 @@ services:
       - .env
     networks:
       - backend
+  applications-service:
+    build: ./applications-service
+    restart: no
+    hostname: applications-service
+    env_file:
+      - .env
+    networks:
+      - backend
+  messages-service:
+    build: ./messages-service
+    restart: no
+    hostname: messages-service
+    env_file:
+      - .env
+    networks:
+      - backend
   mongo:
     image: 'mongo:6'
     restart: no

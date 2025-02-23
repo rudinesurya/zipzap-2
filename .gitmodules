@@ -1,3 +1,6 @@
+[submodule "zipzap-web-client"]
+	path = zipzap-web-client
+	url = git@github.com:rudinesurya/zipzap-web-client.git
 [submodule "api-gateway"]
 	path = api-gateway
 	url = git@github.com:rudinesurya/api-gateway.git

@@ -1,5 +1,13 @@
 version: '3'
 services:
+  # client:
+  #   build: ./zipzap-web-client
+  #   ports:
+  #     - "5173:5173" # Change this if using another frontend framework (React, Vue, etc.)
+  #   networks:
+  #     - frontend
+  #   depends_on:
+  #     - api-gateway
   api-gateway:
     build: ./api-gateway
     restart: no

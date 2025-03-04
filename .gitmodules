@@ -7,6 +7,9 @@
 [submodule "users-service"]
 	path = users-service
 	url = git@github.com:rudinesurya/users-service.git
+[submodule "users-service-interfaces"]
+	path = users-service-interfaces
+	url = git@github.com:rudinesurya/users-service-interfaces.git
 [submodule "token-service"]
 	path = token-service
 	url = git@github.com:rudinesurya/token-service.git

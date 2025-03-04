@@ -11,7 +11,10 @@ services:
     depends_on:
       - api-gateway
   api-gateway:
-    build: ./api-gateway
+    build: 
+      context: ./api-gateway
+      args:
+        NPMRC_CONTENT: "${NPMRC_CONTENT}"
     restart: no
     hostname: api-gateway
     env_file:
@@ -22,7 +25,10 @@ services:
       - backend
       - frontend
   token-service:
-    build: ./token-service
+    build: 
+      context: ./token-service
+      args:
+        NPMRC_CONTENT: "${NPMRC_CONTENT}"
     restart: no
     hostname: token-service
     env_file:
@@ -30,7 +36,10 @@ services:
     networks:
       - backend
   users-service:
-    build: ./users-service
+    build: 
+      context: ./users-service
+      args:
+        NPMRC_CONTENT: "${NPMRC_CONTENT}"
     restart: no
     hostname: users-service
     env_file:
@@ -38,7 +47,10 @@ services:
     networks:
       - backend
   user-ratings-service:
-    build: ./user-ratings-service
+    build: 
+      context: ./user-ratings-service
+      args:
+        NPMRC_CONTENT: "${NPMRC_CONTENT}"
     restart: no
     hostname: user-ratings-service
     env_file:
@@ -46,7 +58,10 @@ services:
     networks:
       - backend
   jobs-service:
-    build: ./jobs-service
+    build: 
+      context: ./jobs-service
+      args:
+        NPMRC_CONTENT: "${NPMRC_CONTENT}"
     restart: no
     hostname: jobs-service
     env_file:
@@ -54,7 +69,10 @@ services:
     networks:
       - backend
   applications-service:
-    build: ./applications-service
+    build: 
+      context: ./applications-service
+      args:
+        NPMRC_CONTENT: "${NPMRC_CONTENT}"
     restart: no
     hostname: applications-service
     env_file:
@@ -62,7 +80,10 @@ services:
     networks:
       - backend
   messages-service:
-    build: ./messages-service
+    build: 
+      context: ./messages-service
+      args:
+        NPMRC_CONTENT: "${NPMRC_CONTENT}"
     restart: no
     hostname: messages-service
     env_file:

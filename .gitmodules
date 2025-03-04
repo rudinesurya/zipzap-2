@@ -22,3 +22,6 @@
 [submodule "messages-service"]
 	path = messages-service
 	url = git@github.com:rudinesurya/messages-service.git
+[submodule "logger"]
+	path = logger
+	url = git@github.com:rudinesurya/logger.git

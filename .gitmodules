@@ -4,6 +4,9 @@
 [submodule "api-gateway"]
 	path = api-gateway
 	url = git@github.com:rudinesurya/api-gateway.git
+[submodule "api-gateway-interfaces"]
+	path = api-gateway-interfaces
+	url = git@github.com:rudinesurya/api-gateway-interfaces.git
 [submodule "users-service"]
 	path = users-service
 	url = git@github.com:rudinesurya/users-service.git

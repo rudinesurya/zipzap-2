@@ -1,7 +1,10 @@
 version: '3'
 services:
   web-client:
-    build: ./zipzap-web-client
+    build: 
+      context: ./zipzap-web-client
+      args:
+        NPMRC_CONTENT: "${NPMRC_CONTENT}"
     environment:
       VITE_API_BASE_URI: ${VITE_API_BASE_URI}
     ports:
